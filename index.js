@@ -10,7 +10,7 @@ var playingTrivia = 'False';
 var questions = [];
 
 bot.on('ready', () => {
-	console.log('I am ready!');
+	console.log('DBot is ready!');
 });
 
 bot.on('message', (message) => {
