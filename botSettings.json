@@ -1,6 +1,6 @@
 {
-    "discordToken": "1",
-    "omdbpApiKey": "1",
-    "newsOrgApiKey": "1",
-    "wundergroundApiKey": "1"
+    "discordToken": "",
+    "omdbpApiKey": "",
+    "newsOrgApiKey": "",
+    "wundergroundApiKey": ""
 }
