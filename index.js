@@ -1,4 +1,5 @@
-const botSettings = require('./botSettings.json')
+const { decodeHtml, decodeAnswer, shuffle } = require('./utils/triviaUtils.js');
+const botSettings = require('./botSettings.json');
 const Discord = require('discord.js');
 const request = require('request');
 const bot = new Discord.Client();
@@ -7,49 +8,6 @@ var triviaIndex = 0;
 var triviaCorrectAnswer = '';
 var playingTrivia = 'False';
 var questions = [];
-
-function decodeHtml(str) {
-	var map =
-	{
-		'&amp;': '&',
-		'&lt;': '<',
-		'&gt;': '>',
-		'&quot;': '"',
-		'&#039;': "'",
-		'&ldquo;': '"'
-	};
-	return str.replace(/&amp;|&lt;|&gt;|&quot;|&#039;|&ldquo;/g, function (m) { return map[m]; });
-}
-
-function decodeAnswer(answer) {
-	var map =
-	{
-		'A': '0',
-		'B': '1',
-		'C': '2',
-		'D': '3'
-	};
-	return map[answer];
-}
-
-function shuffle(array) {
-	var currentIndex = array.length, temporaryValue, randomIndex;
-
-	// While there remain elements to shuffle...
-	while (0 !== currentIndex) {
-
-		// Pick a remaining element...
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
-
-		// And swap it with the current element.
-		temporaryValue = array[currentIndex];
-		array[currentIndex] = array[randomIndex];
-		array[randomIndex] = temporaryValue;
-	}
-
-	return array;
-}
 
 bot.on('ready', () => {
 	console.log('I am ready!');
