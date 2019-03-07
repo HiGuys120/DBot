@@ -4,5 +4,6 @@ exports.run = (client, message, args) => {
         + '!getMovie <Movie Name> -> Shows movie info' + '\n'
         + '!getNews <News source> -> Shows current news' + '\n'
         + '!getWeather <Place> -> Shows weather info' + '\n'
-        + '!makeMeLaugh -> Shows cool jokes');
+        + '!makeMeLaugh -> Shows cool jokes' + '\n'
+        + '!reload <Command Name> -> Reloads command code');
 }
