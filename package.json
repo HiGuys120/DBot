@@ -15,7 +15,8 @@
   "author": "00Mugen00",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.2.1",
+    "discord.js": "^11.4.2",
+    "enmap": "^4.8.1",
     "request": "^2.88.0"
   }
 }

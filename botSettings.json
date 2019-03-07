@@ -1,7 +1,7 @@
 {
-    "discordToken": "",
+    "token": "",
+    "prefix": "!",
     "omdbpApiKey": "",
     "newsOrgApiKey": "",
-    "wundergroundApiKey": "",
-    "prefix": "!"
+    "wundergroundApiKey": ""
 }
