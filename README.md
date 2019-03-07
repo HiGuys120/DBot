@@ -16,5 +16,4 @@ I'll refactor it ASAP
 * !getMovie <Movie Name> -> Shows movie info                      
 * !getNews <News source> -> Shows current news                         
 * !getWeather <Place> -> Shows weather info                      
-* !makeMeLaugh -> Shows cool jokes                           
-* !startTrivia -> Starts a trivia game                       
+* !makeMeLaugh -> Shows cool jokes                                            
