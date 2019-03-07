@@ -14,10 +14,15 @@ bot.on('ready', () => {
 });
 
 bot.on('message', (message) => {
+	if (message.author.bot) return;
+	if (message.content.indexOf(botSettings.prefix) !== 0) return;
+
 	if (message.content.charAt(0) == '!') {
-		let command = message.content.substr(1);
+		const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
+		const command = args.shift();
+
 		if (command.startsWith('getAnime')) {
-			let animeName = command.substr(command.indexOf(' ') + 1);
+			let animeName = args[0];
 			request('https://kitsu.io/api/edge/anime?filter[text]=' + animeName, { json: true, headers: { 'Accept': 'application/vnd.api+json', 'Content-type': 'application/vnd.api+json' } }, (error, response, body) => {
 				if (typeof body.data[0] !== 'undefined') {
 					let title = body.data[0].attributes.titles.en;
@@ -39,7 +44,7 @@ bot.on('message', (message) => {
 				}
 			});
 		} else if (command.startsWith('getMovie')) {
-			let movieName = command.substr(command.indexOf(' ') + 1);
+			let movieName = args[0];
 			request('http://www.omdbapi.com/?t=' + movieName + '&apikey=' + botSettings.omdbpApiKey, { json: true }, (error, response, body) => {
 				if (typeof body.Title !== 'undefined') {
 					let title = body.Title;
@@ -62,7 +67,7 @@ bot.on('message', (message) => {
 				}
 			});
 		} else if (command.startsWith('getNews')) {
-			let newsSource = command.substr(command.indexOf(' ') + 1);
+			let newsSource = args[0];
 			request('https://newsapi.org/v2/top-headlines?sources=' + newsSource + '&apiKey=' + botSettings.newsOrgApiKey, { json: true }, (error, response, body) => {
 				if (body.status == 'ok') {
 					var length = Math.min(3, body.articles.length)
@@ -84,7 +89,7 @@ bot.on('message', (message) => {
 				}
 			});
 		} else if (command.startsWith('getWeather')) {
-			let place = command.substr(command.indexOf(' ') + 1);
+			let place = args[0];
 			request('http://api.wunderground.com/api/' + botSettings.wundergroundApiKey + '/conditions/q/ES/' + place + '.json', { json: true }, (error, response, body) => {
 				if (typeof body.current_observation !== 'undefined') {
 					let location = body.current_observation.display_location.full;
