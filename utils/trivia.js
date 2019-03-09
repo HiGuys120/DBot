@@ -1,4 +1,10 @@
-module.exports.decodeHtml = (str) => {
+module.exports = {
+    decodeHtml: decodeHtml,
+    decodeAnswer: decodeAnswer,
+    shuffle: shuffle
+};
+
+function decodeHtml(str) {
     var map =
     {
         '&amp;': '&',
@@ -11,7 +17,7 @@ module.exports.decodeHtml = (str) => {
     return str.replace(/&amp;|&lt;|&gt;|&quot;|&#039;|&ldquo;/g, function (m) { return map[m]; });
 }
 
-module.exports.decodeAnswer = (answer) => {
+function decodeAnswer(answer) {
     var map =
     {
         'A': '0',
@@ -22,7 +28,7 @@ module.exports.decodeAnswer = (answer) => {
     return map[answer];
 }
 
-module.exports.shuffle = (array) => {
+function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
 

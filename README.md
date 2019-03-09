@@ -13,7 +13,8 @@ Just your everday discord bot
 * !getMovie <Movie Name> -> Shows movie info                      
 * !getNews <News source> -> Shows current news                         
 * !getWeather <Place> -> Shows weather info                      
-* !makeMeLaugh -> Shows cool jokes                                            
+* !makeMeLaugh -> Shows cool jokes       
+* !reload <Command Name> -> Reloads command code                                                    
 
 ## Roadmap                     
-* !startTrivia -> Starts a trivia game
+* !startTrivia -> Starts a trivia game                

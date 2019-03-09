@@ -1,4 +1,4 @@
-const { decodeHtml, decodeAnswer, shuffle } = require('./utils/triviaUtils.js');
+const { decodeHtml, decodeAnswer, shuffle } = require('./utils/trivia.js');
 const botSettings = require('./botSettings.json');
 const Discord = require('discord.js');
 const client = new Discord.Client();
