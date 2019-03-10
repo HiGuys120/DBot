@@ -6,6 +6,11 @@ var listOfCommands = [
     '!getBotInfo -> Shows bot info',
     '!getServerInfo -> Shows server info',
     '!getInfoAboutNumber <Number> -> Shows facts about the number',
+    '!getFortune -> Returns a fortune cookie',
+    '!getCatFacts -> Shows facts about cats',
+    '!getCuteCatImage -> Shows cute cat',
+    '!getDogFacts -> Shows facts about dogs',
+    '!getCuteDogImage -> Shows cute dog',
     '!makeMeLaugh -> Shows cool jokes',
     '!coinFlip -> Does a coin flip',
     '!ping -> returns pong'
