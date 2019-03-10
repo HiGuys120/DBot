@@ -21,11 +21,18 @@ Just your everday discord bot
 * !getCuteCatImage -> Shows cute cat           
 * !getDogFacts -> Shows facts about dogs          
 * !getCuteDogImage -> Shows cute dog                  
-* !getAdvice -> Gives you an advice                         
+* !getAdvice -> Gives you an advice                              
 * !makeMeLaugh -> Shows cool jokes       
 * !coinFlip -> Does a coin flip
 * !ping -> returns pong            
 * !reload <Command Name> -> Reloads command code                                                    
 
 ## Roadmap                     
-* !startTrivia -> Starts a trivia game                
+* !startTrivia -> Starts a trivia game                         
+* !get10MostImplicatedTwitterUser -> Tells you who are the 10 most implicated twitter users to a certain topic                  
+* !getTermFrequency <Concept> -> Returns the most frequent twitter users                                     
+* !doSentimentAnalysis <Concept> -> Does a sentiment analysis (and shows most retweeted tweets)                                        
+* !wordRelationships <Concept> -> Finds out which words are most related to one another                                  
+* !doTopicModelling <Concept> -> Finds out what are the topics related to a concept
+* !replaceInText <Text to be replaced> <Text to replace> | <Text> -> Replaces a certain expression in a text     
+              
