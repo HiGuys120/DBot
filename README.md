@@ -20,7 +20,8 @@ Just your everday discord bot
 * !getCatFacts -> Shows facts about cats               
 * !getCuteCatImage -> Shows cute cat           
 * !getDogFacts -> Shows facts about dogs          
-* !getCuteDogImage -> Shows cute dog
+* !getCuteDogImage -> Shows cute dog                  
+* !getAdvice -> Gives you an advice                         
 * !makeMeLaugh -> Shows cool jokes       
 * !coinFlip -> Does a coin flip
 * !ping -> returns pong            
