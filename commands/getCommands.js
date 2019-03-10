@@ -3,9 +3,12 @@ var listOfCommands = [
     '!getMovie <Movie Name> -> Shows movie info',
     '!getNews <News source> -> Shows current news',
     '!getWeather <Place> -> Shows weather info',
-    '!makeMeLaugh -> Shows cool jokes',
     '!getBotInfo -> Shows bot info',
-    '!getServerInfo -> Shows server info'
+    '!getServerInfo -> Shows server info',
+    '!getInfoAboutNumber <Number> -> Shows facts about the number',
+    '!makeMeLaugh -> Shows cool jokes',
+    '!coinFlip -> Does a coin flip',
+    '!ping -> returns pong'
 ];
 
 exports.run = (client, message, args) => {
